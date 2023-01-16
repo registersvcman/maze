@@ -26,7 +26,7 @@ class Agent(object):
             # if exploiting, gather all possible actions and choose one with the highest G (reward)
             for action in allowedMoves:
                 new_state = tuple([sum(x) for x in zip(state, ACTIONS[action])])
-                if self.G[newState] >= maxG:
+                if self.G[new_state] >= maxG:
                     next_move = action
                     maxG = self.G[new_state]
 
